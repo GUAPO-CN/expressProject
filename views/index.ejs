@@ -1,0 +1,13 @@
+<%- include header %>
+<% posts.forEach(function (post, index) { %>
+  <p><h2><a href="#"><%= post.title %></a></h2></p>
+  <p class="info">
+   	 	作者：<a href="#"><%= post.name %></a> | 
+    	日期：<%= post.time.minute %>
+    	<a href="/clear?title=<%= post.title %>">删除</a>
+  </p>
+  <p><%- post.post %></p>
+<% }) %>
+<%- include footer %>
+<% if (posts.length >0) { %>
+<% } %>
